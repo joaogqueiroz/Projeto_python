@@ -1,0 +1,5 @@
+pip install virtualenv
+virtualenv ambvir --python=3.8
+.\/ambvir/Scripts/activate
+pip install Flask
+pip install Flask-Restful
