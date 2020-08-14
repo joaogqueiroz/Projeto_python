@@ -6,6 +6,7 @@ class SiteModel(banco.Model):
 
     site_id = banco.Column(banco.Interger, primary_key=True)
     url = banco.Column(banco.String)
+    hoteis = banco.relationship('HotelModel') # lista de objetos hoteis
 
     def __init__(self, url):
         self.url = url
@@ -15,6 +16,7 @@ class SiteModel(banco.Model):
         return{
             'site_id': self.site_id,
             'nome': self.url,
+            'hoteis': [hotel.json() for hotel in self.hoteis]
 
         }
 
