@@ -4,7 +4,7 @@ from sql_alchemy import banco
 class SiteModel(banco.Model):
     __tablename__ = 'sites'
 
-    site_id = banco.Column(banco.Interger, primary_key=True)
+    site_id = banco.Column(banco.Integer, primary_key=True)
     url = banco.Column(banco.String)
     hoteis = banco.relationship('HotelModel') # lista de objetos hoteis
 
