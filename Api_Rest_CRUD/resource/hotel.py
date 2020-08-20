@@ -65,6 +65,10 @@ class Hotel(Resource):
 
         dados = Hotel.argumentos.parse_args()
         novo_hotel = HotelModel(hotel_id, **dados)
+
+        if not SiteModel.find_by_id(dados['site_id']):
+            return {"message": "The hotel must be associeted to a valid site ID"}, 400
+
         try:
             novo_hotel.save_hotel()
         except:
