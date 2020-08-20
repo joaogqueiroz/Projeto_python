@@ -1,5 +1,6 @@
 from flask_restful import Resource, reqparse
 from models.hotel import HotelModel
+from models.site import SiteModel
 from resource.filtros import normalize_path_params, consulta_com_cidade, consulta_sem_cidade
 from flask_jwt_extended import jwt_required
 import sqlite3
