@@ -1,1 +1,3 @@
 properties.py
+*.pyc
+banco.db
