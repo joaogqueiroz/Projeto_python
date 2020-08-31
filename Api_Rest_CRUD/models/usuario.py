@@ -2,7 +2,7 @@ from sql_alchemy import banco
 from flask import request, url_for
 from requests import post
 
-#Pgar as credenciais no Mailgun 
+#Pegar as credenciais no Mailgun
 MAILGUN_DOMAIN = ''
 MAILGUN_API_KEY = ''
 FROM_TITLE = 'NO-REPLY'
@@ -18,7 +18,6 @@ class UserModel(banco.Model):
     email = banco.Column(banco.String(80), nullable=False, unique=True)
     ativado = banco.Column(banco.Boolean, default=False)
 
-    def __init__(self, login, senha, ativado):
     def __init__(self, login, senha, email,ativado):
         self.login = login
         self.senha = senha
