@@ -1,12 +1,10 @@
 from sql_alchemy import banco
 from flask import request, url_for
 from requests import post
+from properties import MAILGUN_DOMAIN, MAILGUN_API_KEY,FROM_TITLE,FROM_EMAIL
 
 #Pegar as credenciais no Mailgun
-MAILGUN_DOMAIN = ''
-MAILGUN_API_KEY = ''
-FROM_TITLE = 'NO-REPLY'
-FROM_EMAIL = 'no-replay@restapi.com'
+
 class UserModel(banco.Model):
     __tablename__ = 'usuarios'
 
