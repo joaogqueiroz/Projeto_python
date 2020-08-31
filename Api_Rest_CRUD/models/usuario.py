@@ -1,9 +1,9 @@
 from sql_alchemy import banco
 from flask import request, url_for
 from requests import post
-
-MAILGUN_DOMAIN = 'sandboxa3b5187b879f4300be5a356537d20f72.mailgun.org'
-MAILGUN_API_KEY = '8189188211ef50d4848d167622b9fe67-7cd1ac2b-64cd2ce2'
+#oegar credenciais no mailgun
+MAILGUN_DOMAIN = ''
+MAILGUN_API_KEY = ''
 FROM_TITLE = 'NO-REPLY'
 FROM_EMAIL = 'no-replay@restapi.com'
 class UserModel(banco.Model):
